@@ -52,9 +52,7 @@ module.exports.datastores = {
     // url: 'mysql://user:password@host:port/database',
 
     adapter: 'sails-mongo',
-    /*host: 'localhost',
-    port: 27017*/
-    url: 'mongodb://@localhost:27017/hospital'
+    url: 'mongodb://root:Mlab565@ds125565.mlab.com:25565/heroku_2mlj9rrd'
   },
 
 
