@@ -28,6 +28,7 @@ module.exports.routes = {
     view: 'pages/homepage'
   },
   'GET /patients':            { action: 'patients/view-patients' },
+  'POST  /patients/add':                       { action: 'patients/add-patient' },
 
   /***************************************************************************
   *                                                                          *
