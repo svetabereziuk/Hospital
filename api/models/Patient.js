@@ -13,7 +13,10 @@ module.exports = {
 	street: { type: 'string'},
 	city: { type: 'string'},
 	zip: { type: 'string'},
-	business: { type: 'string'}
+	business: { type: 'string'},
+	medication: { type: 'json'},
+	diagnoses: { type: 'json'},
+	
   },
   tableName: 'patients'
 };
