@@ -84,9 +84,7 @@ module.exports.models = {
 	street: { type: 'string'},
 	city: { type: 'string'},
 	zip: { type: 'string'},
-	business: { type: 'string'},
-	medication: { type: 'Object'},
-	diagnoses: { type: 'Object'}    
+	business: { type: 'string'}  
     //--------------------------------------------------------------------------
     //  /\   Using MongoDB?
     //  ||   Replace `id` above with this instead:
