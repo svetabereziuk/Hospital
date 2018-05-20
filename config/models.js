@@ -72,19 +72,7 @@ module.exports.models = {
     id: { type: 'string', columnName: '_id' },
     //createdAt: { type: 'number', autoCreatedAt: true, },
     //updatedAt: { type: 'number', autoUpdatedAt: true, },
-    firstName: { type: 'string'},
-    lastName: { type: 'string'},
-	sex: { type: 'string'},
-	birthData: { type: 'string'},
-	deathData: { type: 'string'},
-	phone: { type: 'string'},
-	workPhone: { type: 'string'},
-	email: { type: 'string'},
-	house: { type: 'string'},
-	street: { type: 'string'},
-	city: { type: 'string'},
-	zip: { type: 'string'},
-	business: { type: 'string'}  
+  
     //--------------------------------------------------------------------------
     //  /\   Using MongoDB?
     //  ||   Replace `id` above with this instead:
