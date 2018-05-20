@@ -47,6 +47,10 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     default: {
+
+      adapter: 'sails-mongo',
+      url: 'mongodb://root:Mlab565@ds125565.mlab.com:25565/heroku_2mlj9rrd'
+
       // adapter: 'sails-mysql',
       // url: 'mysql://user:password@host:port/database',
       //--------------------------------------------------------------------------
@@ -184,6 +188,10 @@ module.exports = {
     * > (For a full list, see https://sailsjs.com/plugins/sessions)            *
     *                                                                          *
     ***************************************************************************/
+    session: {
+      adapter: 'connect-mongo',
+      url: 'mongodb://root:Mlab565@ds125565.mlab.com:25565/heroku_2mlj9rrd'
+    },
     // adapter: '@sailshq/connect-redis',
     // url: 'redis://user:password@localhost:6379/databasenumber',
     //--------------------------------------------------------------------------
