@@ -87,29 +87,23 @@ module.exports = {
 
     var newEmail = inputs.email.toLowerCase();
 
-    // Build up data for the new user record and save it to the database.
-    // (Also use `fetch` to retrieve the new ID so that we can use it below.)
     var newUserRecord = await Patient.create(Object.assign({
       email: newEmail,
       firstName: inputs.firstName,
       lastName: inputs.lastName,
-	  sex: inputs.sex,
-	  birthData: inputs.birthData,
-	  deathData: inputs.deathData,
-	  business: inputs.business,
-	  city: inputs.city,
-	  state: inputs.state,
-	  street: inputs.street,
-	  house: inputs.house,
-	  zip: inputs.zip,
-	  phone: inputs.phone,
-	  workPhone: inputs.workPhone
+      sex: inputs.sex,
+      birthData: inputs.birthData,
+      deathData: inputs.deathData,
+      business: inputs.business,
+      city: inputs.city,
+      state: inputs.state,
+      street: inputs.street,
+      house: inputs.house,
+      zip: inputs.zip,
+      phone: inputs.phone,
+      workPhone: inputs.workPhone
     }, {}));
-    /*.intercept('E_UNIQUE', 'emailAlreadyInUse')
-    .intercept({name: 'UsageError'}, 'invalid')
-    .fetch();*/
 
-    // Since everything went ok, send our 200 response.
     return exits.success();
 
   }

@@ -23,12 +23,4 @@ module.exports = {
     });
   }
 
-  /*fn: async function (inputs, exits) {
-    //return exits.success();
-  //return this.res.send('Hi there!');
-    return this.res.json(User);
-	//return this.res.json({ user: 'tobi' })
-  }*/
-
-
 };
