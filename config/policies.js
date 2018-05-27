@@ -9,7 +9,11 @@
  */
 
 module.exports.policies = {
+    /*'*': ['isAuthenticated'],
 
+    AuthController: {
+        '*': true
+    }*/
   /***************************************************************************
   *                                                                          *
   * Default policy for all controllers and actions, unless overridden.       *
@@ -17,6 +21,6 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
+   //'*': true,
 
 };

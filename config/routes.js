@@ -29,7 +29,8 @@ module.exports.routes = {
   },
   'GET /patients':            { action: 'patients/view-patients' },
   'POST  /patients':      { action: 'patients/add-patient' },
-
+  'POST /login': 'AuthController.login'
+  //'POST /register': 'AuthController.register'
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *
