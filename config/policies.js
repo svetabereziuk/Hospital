@@ -1,10 +1,9 @@
-
 module.exports.policies = {
 
-    /*'*': ['isAuthenticated'],
+    '*': ['isAuthenticated'],
 
     'entrance/login': {
         '*': true
-    }*/
-    '*': true
+    }
+    
 };

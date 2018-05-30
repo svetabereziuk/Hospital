@@ -18,8 +18,9 @@ module.exports.session = {
   * of your users, forcing them to log in again.                             *
   *                                                                          *
   ***************************************************************************/
+  secret: 'db620e63d161cc1aaf78203d70c4944e',
 
-	
+
   /***************************************************************************
   *                                                                          *
   * Customize when built-in session support will be skipped.                 *
