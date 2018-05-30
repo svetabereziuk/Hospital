@@ -18,15 +18,7 @@ module.exports.session = {
   * of your users, forcing them to log in again.                             *
   *                                                                          *
   ***************************************************************************/
-  secret: 'db620e63d161cc1aaf78203d70c4944e',
 
-	adapter: 'connect-mongo',
-	// Note: user, pass and port are optional
-	url: 'mongodb://root:Mlab565@ds125565.mlab.com:25565/heroku_2mlj9rrd',
-	collection: 'sessions',
-	auto_reconnect: false,
-	ssl: false,
-	stringify: true
 	
   /***************************************************************************
   *                                                                          *

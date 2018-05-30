@@ -18,6 +18,8 @@ module.exports = {
 		medication: { type: 'json'},
 		diagnoses: { type: 'json'},
 	
-  },
-  tableName: 'patients'
+	},
+	
+	tableName: 'patients'
+	
 };

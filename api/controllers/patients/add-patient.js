@@ -24,46 +24,46 @@ module.exports = {
       type: 'string',
     },
 	
-	sex:  {
-      type: 'string'
+    sex:  {
+        type: 'string'
+      },
+    
+    birthData:  {
+        type: 'string'
+      },
+    
+    deathData:  {
+        type: 'string'
+      },
+    
+    business:  {
+        type: 'string'
+      },
+    
+    city:  {
+        type: 'string'
+      },
+    
+    street:  {
+        type: 'string'
+      },
+    
+    house:  {
+        type: 'string'
+      },	
+    
+    zip:  {
+        type: 'string'
+      },
+    
+    phone:  {
+        type: 'string'
+      },
+    
+    workPhone:  {
+        type: 'string'
+      }
     },
-	
-	birthData:  {
-      type: 'string'
-    },
-	
-	deathData:  {
-      type: 'string'
-    },
-	
-	business:  {
-      type: 'string'
-    },
-	
-	city:  {
-      type: 'string'
-    },
-	
-	street:  {
-      type: 'string'
-    },
-	
-	house:  {
-      type: 'string'
-    },	
-	
-	zip:  {
-      type: 'string'
-    },
-	
-	phone:  {
-      type: 'string'
-    },
-	
-	workPhone:  {
-      type: 'string'
-    }
-  },
 
 
   exits: {

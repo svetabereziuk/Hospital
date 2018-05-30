@@ -1,6 +1,6 @@
 const passport = require('passport'),
-  LocalStrategy = require('passport-local').Strategy,
-  bcrypt = require('bcrypt-nodejs');
+LocalStrategy = require('passport-local').Strategy,
+bcrypt = require('bcrypt-nodejs');
   
 passport.serializeUser(function (user, cb) {
   cb(null, user.id);
@@ -24,4 +24,26 @@ passport.use(new LocalStrategy({
       return cb(null, user, { message: 'Login Succesful' });
     });
   });
+}));
+
+
+var JwtStrategy = require('passport-jwt').Strategy;
+var ExtractJwt = require('passport-jwt').ExtractJwt;
+var opts = {};
+
+opts.secretOrKey = '4ukI0uIVnB3iI1yxj646fVXSE3ZVk4doZgz6fTbNg7jO41EAtl20J5F7Trtwe7OM';//config.secret;
+opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
+
+passport.use(new JwtStrategy(opts, function (jwt_payload, done) {
+  User.findOne({ username: jwt_payload.username }, function (err, user) {
+    if (err) {
+      return done(err, false);
+    }
+    if (user) {
+      return done(null, user);
+    } else {
+      return done(null, false);
+    }
+  });
+  
 }));

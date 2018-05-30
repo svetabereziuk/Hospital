@@ -1,0 +1,50 @@
+const passport = require('passport');
+const jwt = require('jwt-simple');
+
+module.exports = {
+
+  friendlyName: 'login',
+  description: 'login',
+
+
+  inputs: {
+
+    username: {
+      required: true,
+      type: 'string'
+    },
+
+    password:  {
+      required: true,
+      type: 'string'
+    }
+
+  },
+
+  exits: {
+
+    invalid: {
+      responseType: 'badRequest',
+      description: 'The provided data is invalid.',
+      extendedDescription: 'If this request was sent from a graphical user interface, the request '+
+      'parameters should have been validated/coerced _before_ they were sent.'
+    }
+
+  },
+
+  fn: async function (inputs, exits) {
+    const res = this.res,
+      req = this.req;
+
+	  passport.authenticate('local', function (err, user, info) {
+      console.log(user);
+      if ((err) || (!user)) return res.send({ message: info.message, user });
+      req.login(user, function (err) {	
+        var token = jwt.encode(user, "4ukI0uIVnB3iI1yxj646fVXSE3ZVk4doZgz6fTbNg7jO41EAtl20J5F7Trtwe7OM");
+        return res.json({ success: true, token: `Bearer ${token}`});
+      });
+    })(req, res);
+	
+  }
+
+};
