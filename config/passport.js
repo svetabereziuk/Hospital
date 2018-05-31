@@ -31,7 +31,7 @@ var JwtStrategy = require('passport-jwt').Strategy;
 var ExtractJwt = require('passport-jwt').ExtractJwt;
 var opts = {};
 
-opts.secretOrKey = sails.config.session.secret;
+opts.secretOrKey = "4ukI0uIVnB3iI1yxj646fVXSE3ZVk4doZgz6fTbNg7jO41EAtl20J5F7Trtwe7OM";
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 
 passport.use(new JwtStrategy(opts, function (jwt_payload, done) {
