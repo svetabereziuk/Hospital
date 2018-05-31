@@ -1,7 +1,9 @@
 const passport = require('passport'),
 LocalStrategy = require('passport-local').Strategy,
-bcrypt = require('bcrypt-nodejs');
-  
+bcrypt = require('bcrypt-nodejs'),
+JwtStrategy = require('passport-jwt').Strategy,
+ExtractJwt = require('passport-jwt').ExtractJwt;
+
 passport.serializeUser(function (user, cb) {
   cb(null, user.id);
 });
@@ -26,12 +28,9 @@ passport.use(new LocalStrategy({
   });
 }));
 
-
-var JwtStrategy = require('passport-jwt').Strategy;
-var ExtractJwt = require('passport-jwt').ExtractJwt;
 var opts = {};
 
-opts.secretOrKey = sails.config.session.secret;
+opts.secretOrKey = "db620e63d161cc1aaf78203d70c4944e";;
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 
 passport.use(new JwtStrategy(opts, function (jwt_payload, done) {
