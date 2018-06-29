@@ -40,7 +40,7 @@ module.exports = {
       if ((err) || (!user)) return res.send({ message: info.message, user });
       req.login(user, function (err) {	
         var token = jwt.encode(user, sails.config.session.secret);
-        return res.json({ success: true, token: `Bearer ${token}`});
+        return res.json({ success: true, user:{token: `Bearer ${token}`, username: user.username }});
       });
     })(req, res);
 	
